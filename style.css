@@ -260,8 +260,8 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
 .gallery-section h2 { font-size: 3.5rem; text-align: center; margin-bottom: 60px; }
 .masonry-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-auto-rows: 250px; gap: 20px; }
 .gallery-item { border-radius: 4px; overflow: hidden; position: relative; border: 1px solid var(--glass-border); cursor: pointer; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1); filter: grayscale(40%); }
-.gallery-item:hover img { transform: scale(1.05); filter: grayscale(0%); }
+.gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1); filter: grayscale(40%); }
+.gallery-item:hover img, .gallery-item:hover video { transform: scale(1.05); filter: grayscale(0%); }
 .tall { grid-row: span 2; }
 .wide { grid-column: span 2; }
 

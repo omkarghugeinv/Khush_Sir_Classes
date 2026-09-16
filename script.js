@@ -452,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         videos.forEach(video => {
             // Prevent auto buffering of everything at once
-            video.setAttribute("preload", "none");
+            video.setAttribute("preload", "metadata");
             videoObserver.observe(video);
         });
     }
