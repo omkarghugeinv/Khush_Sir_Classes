@@ -201,7 +201,7 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
 .timeline-wrapper::-webkit-scrollbar { display: none; }
 
 .timeline-track {
-    display: flex; gap: 40px;
+    display: flex; gap: 40px; padding: 0 10px;
     width: max-content;
 }
 .timeline-item { min-width: 350px; flex-shrink: 0; scroll-snap-align: start; }
@@ -381,7 +381,7 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
     .quote { font-size: 1.5rem; }
     .about-text h2, .work-section h2, .gallery-section h2, .awards-section h2 { font-size: 2.2rem; }
 
-    .timeline-item { min-width: 280px; }
+    .timeline-item { min-width: calc(100vw - 40px); scroll-snap-align: center; }
     
     /* Performance fixes for mobile GPUs */
     .magnetic-nav, .glass-card, .lightbox {

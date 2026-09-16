@@ -247,14 +247,20 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
 if (timelineWrapper && prevBtn && nextBtn) {
-    const scrollAmount = 390; // Card width (350) + gap (40)
+    const getScrollAmount = () => {
+        const item = document.querySelector('.timeline-item');
+        const track = document.querySelector('.timeline-track');
+        if (!item || !track) return 390;
+        const gap = parseInt(window.getComputedStyle(track).gap) || 0;
+        return item.offsetWidth + gap;
+    };
 
     nextBtn.addEventListener('click', () => {
-        timelineWrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        timelineWrapper.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
 
     prevBtn.addEventListener('click', () => {
-        timelineWrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        timelineWrapper.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
 }
 
