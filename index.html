@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aims Academy | Educational Classes Portfolio</title>
+    <meta name="description" content="Aims Academy â€” India's premier destination for competitive and board exam coaching, providing quality education and mentorship for future leaders.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aims Academy | Educational Classes Portfolio">
+    <meta property="og:description" content="Empowering Minds, Shaping Futures. Top-tier education, curated classes, and a community of bright students.">
+    <meta property="og:image" content="Images/Img_1.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aims Academy | Educational Classes Portfolio">
+    <meta name="twitter:description" content="Empowering Minds, Shaping Futures. Top-tier education, curated classes, and a community of bright students.">
+    <meta name="twitter:image" content="Images/Img_1.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- GSAP for Motion Primitives -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">AA.</div>
+            <div class="curtain-left"></div>
+            <div class="curtain-right"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor (Manus) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Three.js Interactive Background (Stage Dust) -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn magnetic" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="magnetic-nav">
+        <div class="logo magnetic">AA.</div>
+        <ul class="nav-links">
+            <li class="magnetic"><a href="#intro" class="nav-link active">Home</a></li>
+            <li class="magnetic"><a href="#about" class="nav-link">About Us</a></li>
+            <li class="magnetic"><a href="#work" class="nav-link">Courses</a></li>
+            <li class="magnetic"><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li class="magnetic"><a href="#contact" class="nav-link">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Intro Section -->
+        <section id="intro" class="section hero-section">
+            <div class="interactive-curtain curtain-l"></div>
+            <div class="interactive-curtain curtain-r"></div>
+            <div class="section-transition"></div>
+            <div class="content-wrapper">
+                <h1 class="split-text">Aims<br><span class="accent-primary">Academy</span></h1>
+                <p class="subtitle fade-up">Empowering Minds, Shaping Futures. Welcome to the Academy.</p>
+                <div class="scroll-indicator">
+                    <span>Draw the Curtains</span>
+                    <div class="mouse"><div class="wheel"></div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="section vision-section">
+            <div class="section-transition"></div>
+            <div class="content-wrapper glass-card reveal">
+                <h2 class="title">Our Vision</h2>
+                <p class="quote">"We are working to build the best educational community. A space for those who aspire to excel academically and achieve their goals through quality education."</p>
+                <img loading="lazy" decoding="async" src="Images/Img_2.png" class="floating-img" alt="Academy Vision">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-transition"></div>
+            <div class="content-wrapper">
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h2><span class="accent-gold">Who</span> are we?</h2>
+                        <p>Aims Academy represents excellence in education. We are a community of dedicated educators and ambitious students.</p>
+                    </div>
+                    <div class="about-img reveal">
+                        <img loading="lazy" decoding="async" src="Images/Img_1.png" alt="About Us">
+                    </div>
+                    
+                    <div class="about-text reveal">
+                        <h2><span class="accent-primary">What</span> do we do?</h2>
+                        <p>We provide top-notch classes, comprehensive study materials, and expert guidance. We inspire students to achieve their full potential.</p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Work Section â€” Horizontal Scroll Timeline -->
+        <section id="work" class="section work-section">
+            <div class="section-transition"></div>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <h2 class="reveal">Our Courses</h2>
+                    <div class="timeline-nav reveal">
+                        <button class="nav-btn prev-btn magnetic" aria-label="Previous production"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-btn next-btn magnetic" aria-label="Next production"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="timeline-wrapper">
+                    <div class="timeline-track">
+                        <div class="timeline-item reveal">
+                            <div class="timeline-year">KG</div>
+                            <div class="timeline-card magnetic">
+                                <i class="fas fa-child card-icon"></i>
+                                <h3>Pre-Primary (KG)</h3>
+                                <p>Fun, interactive learning to build a strong foundation for the youngest learners, focusing on basics and early development.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-year">1-4</div>
+                            <div class="timeline-card magnetic">
+                                <i class="fas fa-book card-icon"></i>
+                                <h3>Primary (1st to 4th)</h3>
+                                <p>Engaging classes that introduce fundamental concepts in core subjects like mathematics, science, and languages.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-year">5-7</div>
+                            <div class="timeline-card magnetic">
+                                <i class="fas fa-microscope card-icon"></i>
+                                <h3>Middle School (5th to 7th)</h3>
+                                <p>Advanced concepts and hands-on learning designed to prepare students for higher-level academics and critical thinking.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-year">8-10</div>
+                            <div class="timeline-card magnetic">
+                                <i class="fas fa-graduation-cap card-icon"></i>
+                                <h3>High School (8th to 10th)</h3>
+                                <p>Rigorous coaching, comprehensive syllabus coverage, and board exam preparation to ensure top academic performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Survey Section -->
+        <section class="section survey-section">
+            <div class="section-transition"></div>
+            <div class="content-wrapper glass-card reveal">
+                <h2 style="font-size: 2.5rem; text-align:center; margin-bottom: 10px;">Student Survey</h2>
+                <p style="text-align:center; color: #a1a1aa; margin-bottom: 40px; font-family: 'Outfit';">Which field are you most interested in?</p>
+                
+                <div class="poll-container" role="radiogroup" aria-label="Academic preferences">
+                    <button type="button" role="radio" aria-checked="false" class="poll-option magnetic" data-votes="72">
+                        <div class="poll-fill"></div>
+                        <span class="poll-label">Engineering</span>
+                        <span class="poll-percent">0%</span>
+                    </button>
+                    <button type="button" role="radio" aria-checked="false" class="poll-option magnetic" data-votes="45">
+                        <div class="poll-fill"></div>
+                        <span class="poll-label">Medical</span>
+                        <span class="poll-percent">0%</span>
+                    </button>
+                    <button type="button" role="radio" aria-checked="false" class="poll-option magnetic" data-votes="89">
+                        <div class="poll-fill"></div>
+                        <span class="poll-label">Business & Commerce</span>
+                        <span class="poll-percent">0%</span>
+                    </button>
+                    <button type="button" role="radio" aria-checked="false" class="poll-option magnetic" data-votes="30">
+                        <div class="poll-fill"></div>
+                        <span class="poll-label">Arts & Humanities</span>
+                        <span class="poll-percent">0%</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+            <div class="section-transition"></div>
+            <div class="content-wrapper">
+                <h2 class="reveal">Academy Gallery</h2>
+                <div class="masonry-gallery">
+                    <div class="gallery-item reveal"><video loading="lazy" autoplay loop muted playsinline width="100%"><source src="Video/WhatsApp Video 2026-09-16 at 10.26.31 AM.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item reveal"><video loading="lazy" autoplay loop muted playsinline width="100%"><source src="Video/VID_20260815_174634.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item reveal"><video loading="lazy" autoplay loop muted playsinline width="100%"><source src="Video/VID_20260815_174839.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item reveal"><video loading="lazy" autoplay loop muted playsinline width="100%"><source src="Video/VID_20260818_165623.mp4" type="video/mp4"></video></div>
+                    <div class="gallery-item reveal wide"><video loading="lazy" autoplay loop muted playsinline width="100%"><source src="Video/VID_20260818_165642.mp4" type="video/mp4"></video></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <button class="lightbox-close" aria-label="Close modal">&times;</button>
+            <img id="lightbox-img" src="" alt="Enlarged gallery image">
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-transition"></div>
+            <div class="content-wrapper glass-card reveal">
+                <h2>Join the <span class="accent-primary">Academy</span></h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-envelope"></i> aimsacademy2022@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 7757047811</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/artistichumans/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook" class="magnetic"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/theartistichumans/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram" class="magnetic"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="tally-form">
+                        <!-- Tally iframe embedded -->
+                        <iframe data-tally-src="https://tally.so/embed/EkVBDr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" title="Artist Network Registration"></iframe>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">Aims Academy</div>
+            <p class="footer-tagline">Empowering Minds, Shaping Futures.</p>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/artistichumans/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/theartistichumans/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="#intro" class="back-to-top magnetic">
+                <i class="fas fa-arrow-up"></i>
+                <span>Back to Top</span>
+            </a>
+            <p class="footer-credits">&copy; 2026 Aims Academy. Created by <a href="https://www.linkedin.com/in/omkarghugeinv/" target="_blank" rel="noopener noreferrer">Omkar Ghuge</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="webgl-bg.js"></script>
+    <script src="curtain.js"></script>
+    <script src="script.js"></script>
+    <script src="https://tally.so/widgets/embed.js"></script>
+</body>
+</html>
