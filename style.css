@@ -1,4 +1,4 @@
-﻿/* Color Palette: Cinematic Drama (Theatre Red, Spotlight Gold, Velvet Black) */
+/* Color Palette: Academy Blue, Highlight Gold, Deep Black */
 :root {
     --primary: #0056b3;
     --primary-light: #007bff;
@@ -84,7 +84,7 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
 }
 .hovering .cursor-outline {
     width: 60px; height: 60px;
-    background-color: rgba(201, 24, 74, 0.1);
+    background-color: rgba(0, 86, 179, 0.1);
     border-color: var(--accent);
     transform: translate(-26px, -26px);
 }
@@ -214,7 +214,7 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
     border: 1px solid var(--glass-border); border-radius: 4px; padding: 40px 30px;
     transition: transform 0.4s, background 0.4s, border-color 0.4s;
 }
-.timeline-card:hover { transform: translateY(-10px); background: rgba(201, 24, 74, 0.1); border-color: var(--primary); }
+.timeline-card:hover { transform: translateY(-10px); background: rgba(0, 86, 179, 0.1); border-color: var(--primary); }
 .card-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
 .timeline-card h3 { font-size: 1.5rem; margin-bottom: 12px; }
 .timeline-card p { color: #a1a1aa; line-height: 1.6; font-family: 'Outfit', sans-serif; font-size: 0.95rem; }
@@ -249,7 +249,7 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
 .poll-option:hover { transform: scale(1.02); border-color: var(--primary); }
 .poll-fill {
     position: absolute; top: 0; left: 0; height: 100%; width: 0%;
-    background: linear-gradient(90deg, rgba(201,24,74,0.3), rgba(212,175,55,0.3));
+    background: linear-gradient(90deg, rgba(0,86,179,0.3), rgba(255,193,7,0.3));
     z-index: 0; transition: width 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 .poll-label, .poll-percent { position: relative; z-index: 1; font-family: 'Outfit', sans-serif; font-size: 1.1rem; }
@@ -400,3 +400,26 @@ h1, h2, h3, .quote { font-family: 'Playfair Display', serif; }
 
 /* GSAP Utility */
 .reveal { opacity: 0; transform: translateY(50px); }
+
+/* ===== Floating WhatsApp Button ===== */
+.whatsapp-float {
+    position: fixed; bottom: 30px; right: 30px;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: #25D366; color: #fff; font-size: 2rem;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; z-index: 9999;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: whatsapp-pulse 2s infinite;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+@keyframes whatsapp-pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+}
+@media (max-width: 768px) {
+    .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; font-size: 1.8rem; }
+}
