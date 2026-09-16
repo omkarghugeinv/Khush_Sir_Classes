@@ -4,11 +4,12 @@
 class RealisticCurtain {
     constructor(container, opts = {}) {
         this.container = container;
-        this.cols = opts.cols || 35;
-        this.rows = opts.rows || 45;
+        const isMobile = window.innerWidth < 768;
+        this.cols = opts.cols || (isMobile ? 15 : 25);
+        this.rows = opts.rows || (isMobile ? 20 : 30);
         this.gravity = opts.gravity || 0.01;
         this.damping = opts.damping || 0.95;
-        this.iterations = opts.iterations || 5;
+        this.iterations = opts.iterations || (isMobile ? 3 : 5);
         this.textureUrl = opts.textureUrl || 'Images/curtain_texture.jpg';
 
         this.mouseActive = false;

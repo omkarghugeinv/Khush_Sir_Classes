@@ -434,3 +434,26 @@ if (window.matchMedia("(pointer: fine)").matches) {
         }
     }
 }
+
+// ===== PERFORMANCE: LAZY PLAY VIDEOS =====
+document.addEventListener("DOMContentLoaded", () => {
+    const videos = document.querySelectorAll("video");
+    
+    if ("IntersectionObserver" in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.play().catch(e => console.log("Autoplay blocked:", e));
+                } else {
+                    entry.target.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        videos.forEach(video => {
+            // Prevent auto buffering of everything at once
+            video.setAttribute("preload", "none");
+            videoObserver.observe(video);
+        });
+    }
+});

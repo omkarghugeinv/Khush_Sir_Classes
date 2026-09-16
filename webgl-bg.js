@@ -14,7 +14,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const particlesGeometry = new THREE.BufferGeometry();
 // Performance optimization: fewer particles on mobile devices
 const isMobile = window.innerWidth <= 768;
-const particlesCount = isMobile ? 500 : 1500;
+const particlesCount = isMobile ? 200 : 600;
 
 const posArray = new Float32Array(particlesCount * 3);
 const colorsArray = new Float32Array(particlesCount * 3);
